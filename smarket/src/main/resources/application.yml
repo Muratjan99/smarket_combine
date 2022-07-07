@@ -1,0 +1,72 @@
+spring:
+  # 数据源配置
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://115.154.88.174:3306/smarket?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # redis配置
+  #redis配置
+  redis:
+    #是否开启redis缓存 true开启 false关闭
+    open: true
+    #Redis服务器地址
+    host: 115.154.88.174
+    #Redis服务器连接端口
+    port: 6379
+    #Redis数据库索引（默认为0）
+    database: 1
+    jedis:
+      pool:
+        #连接池最大连接数（使用0表示没有限制）
+        max-active: 500
+        #连接池最大阻塞等待时间（使用0表示没有限制）
+        max-wait: 3000
+        #连接池中的最大空闲连接
+        max-idle: 100
+        #连接池中的最小空闲连接
+        min-idle: 50
+    #连接超时时间（毫秒）
+    timeout: 3000
+# mybatis-plus配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted
+
+# Sa-Token配置
+sa-token:
+  # token 名称 (同时也是cookie名称)
+  token-name: smarket
+  # token 有效期，单位s 默认30天, -1代表永不过期
+  timeout: 2592000
+  # token 临时有效期 (指定时间内无操作就视为token过期) 单位: 秒
+  activity-timeout: -1
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # token风格
+  token-style: uuid
+  # 是否输出操作日志
+  is-log: false
+#fastDFS 配置
+fdfs:
+  connect-timeout: 1000
+  so-timeout: 1000
+  thumb-image:
+    width: 150
+    height: 150
+  tracker-list: 115.154.88.174:22122
+ai:
+  appId: 26579221
+  apiKey: wiSwCHRSDxnkoKps5uh6o4GB
+  secretKey: E8bd3hoqd18qVM68Xm1h2mnxeEZfDYNs
+  imageType: BASE64
+  groupId: login_1
+
+server:
+  port: 80
+
