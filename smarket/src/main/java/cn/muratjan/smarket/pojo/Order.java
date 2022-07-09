@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.github.yulichang.annotation.EntityMapping;
 import lombok.Data;
 
@@ -15,13 +16,13 @@ import javax.validation.constraints.NotBlank;
  * 
  * @TableName order
  */
-@TableName(value ="order")
+@TableName(value ="`order`")
 @Data
 public class Order implements Serializable {
     /**
      * 订单编号
      */
-    @TableId(type = IdType.ASSIGN_UUID)
+    @TableId(type = IdType.INPUT)
     private String orderId;
 
     /**
@@ -53,6 +54,11 @@ public class Order implements Serializable {
      */
     @Min(value = 1, message = "购买数量不能小于1")
     private Integer quantity;
+
+    /**
+     * 总价
+     */
+    private Double totalMoney;
 
     /**
      * 下单时间
@@ -91,7 +97,7 @@ public class Order implements Serializable {
     /**
      * 乐观锁
      */
-    @Version
+//    @Version
     @TableField(fill = FieldFill.INSERT)
     private Integer version;
 

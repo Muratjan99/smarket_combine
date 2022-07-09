@@ -1,4 +1,6 @@
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
   # 数据源配置
   datasource:
     username: root
@@ -32,6 +34,7 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true
   global-config:
     db-config:
       logic-delete-field: isDeleted
@@ -60,13 +63,6 @@ fdfs:
     width: 150
     height: 150
   tracker-list: 115.154.88.174:22122
-ai:
-  appId: 26579221
-  apiKey: wiSwCHRSDxnkoKps5uh6o4GB
-  secretKey: E8bd3hoqd18qVM68Xm1h2mnxeEZfDYNs
-  imageType: BASE64
-  groupId: login_1
-
 server:
   port: 80
 

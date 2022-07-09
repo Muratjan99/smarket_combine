@@ -4,7 +4,206 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f84d427-477f-4af7-bcf9-1f6f8445022b" name="Changes" comment="" />
+    <list default="true" id="0f84d427-477f-4af7-bcf9-1f6f8445022b" name="Changes" comment="mainly finished">
+      <change afterPath="$PROJECT_DIR$/.idea/smartfox_info.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/configure/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/configure/StpInterfaceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/utils/ApplicationContextUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/utils/MybatisPlusRedisCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/utils/RedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/controller/RolePermissionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/controller/TableController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/dto/OrderDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/dto/ProductTableDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/dto/UserTableDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/AddressMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/AnswerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/CampusMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/ChatContentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/FavoriteMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/FootprintMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/LoginHistoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/LoginMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/LogintypeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/OrderDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/PermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/PhotoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/PrivateChatMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/ProductTableDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/QuestionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/RoleUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/SoldHistoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/TuserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/UserBehaviorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/UserFavoriteMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/UserFootprintMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/UserTableDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Campus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/ChatContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Favorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Footprint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/LoginHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Logintype.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Photo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/PrivateChat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/RoleUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/SoldHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/Tuser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/UserBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/UserFavorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/pojo/UserFootprint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/AddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/AnswerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/CampusService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/ChatContentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/FavoriteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/FootprintService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/LoginHistoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/LogintypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/PermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/PhotoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/PrivateChatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/QuestionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/RoleUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/SoldHistoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/TableService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/TuserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/UserBehaviorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/UserFavoriteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/UserFootprintService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/AddressServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/AnswerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/CampusServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/ChatContentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/FavoriteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/FootprintServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/LoginHistoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/LogintypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/PermissionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/PhotoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/PrivateChatServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/QuestionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/RoleUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/SoldHistoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/TableServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/TuserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/UserBehaviorServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/UserFavoriteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/UserFootprintServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/vo/GeneralInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/vo/LoginVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/vo/TablesVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/vo/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/cn/muratjan/admin/common/utils/RedisUtilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/cn/muratjan/admin/mapper/TuserMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/cn/muratjan/admin/service/impl/RoleServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/cn/muratjan/admin/service/impl/TableServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/utils/ApplicationContextUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/utils/MybatisPlusRedisCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/utils/RedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/RoleUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/RoleUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/service/RoleUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/service/impl/RoleUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15bd3afd-7351-48b7-b5a7-6b21c3d75c9e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/15bd3afd-7351-48b7-b5a7-6b21c3d75c9e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81a79ed0-66d7-4bc9-8dbf-cc2e552045ba.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81a79ed0-66d7-4bc9-8dbf-cc2e552045ba.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/AdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/configure/SaTokenConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/configure/SaTokenConfigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/excaption/AddressException.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/excaption/AdminServiceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/excaption/FastDFSException.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/excaption/RolePermissionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/excaption/FavoriteException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/excaption/ProductException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/excaption/UserException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/utils/BaiduAiUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/utils/FaceUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/utils/HttpUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/utils/IPUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/utils/JsonData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/common/utils/MyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/test/java/cn/muratjan/admin/AdminApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/test/java/cn/muratjan/admin/AdminApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/configure/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/configure/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/configure/RedisListenerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/configure/SaTokenConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/configure/SaTokenConfigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/utils/BaiduAiUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/utils/FaceUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/utils/HttpUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/utils/JsonData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/utils/MyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/common/utils/RedisUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/FaceLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/FavoriteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/FavoriteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/FootprintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/FootprintController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/TUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/controller/TUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/AddressMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/AddressMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/CampusMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/CampusMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/CatagoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/CatagoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/FavoriteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/FavoriteMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/FootprintMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/FootprintMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/LoginHistoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/LoginHistoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/LoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/LoginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/PhotoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/PhotoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/TuserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/TuserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Favorite.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Favorite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Footprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Footprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/LoginHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/LoginHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Logintype.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Logintype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Photo.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Photo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Tuser.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/Tuser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/service/impl/FaceLoginServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smarket/src/test/java/cn/muratjan/smarket/SmarketApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/smarket/src/test/java/cn/muratjan/smarket/SmarketApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +213,24 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/OrderMapper.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/mapper/ProductMapper.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/ProductService.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/service/impl/ProductServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/main/java/cn/muratjan/admin/vo/GeneralInfo.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/mapper/RoleUserMapper.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/pojo/RoleUser.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/smarket/src/main/java/cn/muratjan/smarket/service/impl/RoleUserServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/smarket/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -28,21 +243,33 @@
     </option>
   </component>
   <component name="ProjectId" id="2BVj1qIqw0bdI1kzzx9bxAce0g7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "D:/develop/Codes/Java/smarket_combine/admin/src/main/java/cn/muratjan/admin",
+    "last_opened_file_path": "D:/develop/Codes/Java/smarket_combine/smarket/src/main/java/cn/muratjan/smarket/common/utils",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,6 +279,8 @@
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+    ],
     "DatabaseDriversLRU": [
       "mysql"
     ]
@@ -61,13 +290,30 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.muratjan.admin.vo" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\develop\Codes\Java\smarket_combine\admin\src\main\java\cn\muratjan\admin" />
-      <recent name="D:\develop\Codes\Java\smarket_combine\smarket\src\main\java\cn\muratjan\smarket" />
-      <recent name="D:\develop\Codes\Java\smarket_combine\smarket\src\main\java" />
+      <recent name="D:\develop\Codes\Java\smarket_combine\smarket\src\main\java\cn\muratjan\smarket\common\utils" />
+      <recent name="D:\develop\Codes\Java\smarket_combine\smarket\src\main\java\cn\muratjan\smarket\common\configure" />
+      <recent name="D:\develop\Codes\Java\smarket_combine\smarket\src\main\java\cn\muratjan\smarket\service\impl" />
+      <recent name="D:\develop\Codes\Java\smarket_combine\smarket\src\main\java\cn\muratjan\smarket\mapper" />
+      <recent name="D:\develop\Codes\Java\smarket_combine\smarket\src\main\java\cn\muratjan\smarket\pojo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="cn.muratjan.admin.service.impl" />
+      <recent name="cn.muratjan.admin.mapper" />
+      <recent name="cn.muratjan.admin.common.utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.muratjan.smarket.common.excaption" />
+      <recent name="cn.muratjan.admin.mapper" />
+      <recent name="cn.muratjan.admin.dto" />
+      <recent name="cn.muratjan.admin.service.impl" />
+      <recent name="cn.muratjan.admin.service" />
+      <recent name="cn.muratjan.admin.common.excaption" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -77,11 +323,43 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Springboot 聚合项目">
+  <component name="RunManager" selected="Spring Boot.SmarketApplication">
     <configuration name="Springboot 聚合项目" type="CompoundRunConfigurationType">
       <toRun name="AdminApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="SmarketApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
+    </configuration>
+    <configuration name="AdminApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.muratjan.admin.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.muratjan.admin" />
+      <option name="MAIN_CLASS_NAME" value="cn.muratjan.admin.AdminApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisUtilTest.setUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.muratjan.admin.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.muratjan.admin.common.utils" />
+      <option name="MAIN_CLASS_NAME" value="cn.muratjan.admin.common.utils.RedisUtilTest" />
+      <option name="METHOD_NAME" value="setUp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="SmarketApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smarket" />
@@ -94,6 +372,38 @@
       <option name="PACKAGE_NAME" value="cn.muratjan.smarket" />
       <option name="MAIN_CLASS_NAME" value="cn.muratjan.smarket.SmarketApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TableServiceImplTest.getUserTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.muratjan.admin.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.muratjan.admin.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="cn.muratjan.admin.service.impl.TableServiceImplTest" />
+      <option name="METHOD_NAME" value="getUserTable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TuserMapperTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.muratjan.admin.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.muratjan.admin.mapper" />
+      <option name="MAIN_CLASS_NAME" value="cn.muratjan.admin.mapper.TuserMapperTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,6 +426,10 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Springboot 聚合项目" />
+      <item itemvalue="JUnit.RedisUtilTest.setUp" />
+      <item itemvalue="JUnit.TableServiceImplTest.getUserTable" />
+      <item itemvalue="JUnit.TuserMapperTest.test" />
+      <item itemvalue="JUnit.AdminApplicationTests.contextLoads" />
       <item itemvalue="JUnit.SmarketApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.AdminApplication" />
       <item itemvalue="Spring Boot.SmarketApplication" />
@@ -123,6 +437,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SmarketApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.TableServiceImplTest.getUserTable" />
+        <item itemvalue="JUnit.TuserMapperTest.test" />
+        <item itemvalue="JUnit.RedisUtilTest.setUp" />
+        <item itemvalue="JUnit.AdminApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -136,12 +454,31 @@
       <updated>1656997934506</updated>
       <workItem from="1656997935797" duration="3648000" />
       <workItem from="1657003387953" duration="44382000" />
-      <workItem from="1657159195029" duration="8592000" />
+      <workItem from="1657159195029" duration="41170000" />
+      <workItem from="1657244195839" duration="6374000" />
+      <workItem from="1657280199526" duration="6250000" />
+      <workItem from="1657341905754" duration="19498000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="mainly finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="mainly finished" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

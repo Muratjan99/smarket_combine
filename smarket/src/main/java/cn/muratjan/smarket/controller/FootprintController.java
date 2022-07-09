@@ -40,7 +40,7 @@ public class FootprintController {
         QueryWrapper<Footprint> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("product_id", productId);
         queryWrapper.eq("create_by", StpUtil.getLoginIdAsLong());
-        long count = footprintServiceImpl.count();
+        long count = footprintServiceImpl.count(queryWrapper);
         if (count > 0) {
             return AjaxResult.error("已经添加过足迹");
         }

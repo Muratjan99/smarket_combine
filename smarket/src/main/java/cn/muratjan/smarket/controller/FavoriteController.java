@@ -5,7 +5,9 @@ import cn.dev33.satoken.stp.StpUtil;
 import cn.muratjan.smarket.common.AjaxResult;
 import cn.muratjan.smarket.common.excaption.FavoriteException;
 import cn.muratjan.smarket.pojo.Favorite;
+import cn.muratjan.smarket.pojo.Product;
 import cn.muratjan.smarket.service.FavoriteService;
+import cn.muratjan.smarket.service.ProductService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +29,9 @@ public class FavoriteController {
     @Resource
     private FavoriteService favoriteServiceImpl;
 
+    @Resource
+    private ProductService productServiceImpl;
+
     /**
      * 添加收藏
      * @return AjaxResult
@@ -36,11 +41,40 @@ public class FavoriteController {
     public AjaxResult addFavorite(@RequestParam @Min(message = "商品ID不合法",value = 0)  Long productId) {
         Favorite favorite = new Favorite();
         favorite.setProductId(productId);
+        Product byId = productServiceImpl.getById(productId);
+        if (byId == null) {
+            throw new FavoriteException("商品不存在");
+        }
+        QueryWrapper<Favorite> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("product_id", productId);
+        queryWrapper.eq("user_id", StpUtil.getLoginIdAsLong());
+        Favorite byId1 = favoriteServiceImpl.getOne(queryWrapper);
+        if (byId1 != null) {
+            throw new FavoriteException("已收藏");
+        }
         boolean save = favoriteServiceImpl.save(favorite);
         if(!save){
             throw new FavoriteException("添加收藏失败");
         }
         return AjaxResult.success("添加收藏成功");
+    }
+
+    /**
+     * 检查是否收藏
+     * @param productId 商品ID
+     * @return AjaxResult
+     */
+    @GetMapping("/check")
+    @SaCheckLogin
+    public AjaxResult checkAdd(@RequestParam @Min(message = "商品ID不合法",value = 0)  Long productId){
+        QueryWrapper<Favorite> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("product_id", productId);
+        queryWrapper.eq("create_by", StpUtil.getLoginIdAsLong());
+        long count = favoriteServiceImpl.count(queryWrapper);
+        if (count > 0) {
+            throw new FavoriteException("已收藏");
+        }
+        return AjaxResult.success("ok");
     }
     /**
      * 查询

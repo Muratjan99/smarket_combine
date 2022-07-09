@@ -30,11 +30,13 @@ public class ProductController {
      */
     @GetMapping("/getMyAllProduct")
     @SaCheckLogin
-    public AjaxResult getProduct(@RequestParam int status) {
+    public AjaxResult getProduct(@RequestParam int status,@RequestParam int page,@RequestParam int size) {
         QueryWrapper<Product> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("vendor_id", StpUtil.getLoginIdAsLong());
-        queryWrapper.eq("status", status);
-        return AjaxResult.success(productServiceImpl.list(queryWrapper));
+        if(status == 1 || status == 0){
+            queryWrapper.eq("status", status);
+        }
+        return AjaxResult.success(productServiceImpl.page(new Page<>(page, size), queryWrapper));
     }
     /**
      * 获取所有商品

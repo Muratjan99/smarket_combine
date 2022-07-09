@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 /**
@@ -34,6 +36,7 @@ public class Logintype implements Serializable {
      * 创建者
      */
     @TableField(fill = FieldFill.INSERT)
+
     private Long createBy;
 
     /**

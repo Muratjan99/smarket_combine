@@ -21,7 +21,7 @@
       <module name="admin" options="-parameters" />
       <module name="smarket" options="-parameters" />
       <module name="smarket_admin" options="-parameters" />
-      <module name="smarket_combine" options="-parameters" />
+      <module name="smarket_combine" options="" />
       <module name="smarket_main" options="-parameters" />
     </option>
   </component>

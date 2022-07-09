@@ -1,9 +1,12 @@
 package cn.muratjan.admin.common.handler;
 
 import cn.dev33.satoken.exception.NotLoginException;
+import cn.dev33.satoken.exception.NotPermissionException;
+import cn.dev33.satoken.exception.NotRoleException;
 import cn.muratjan.admin.common.AjaxResult;
 import cn.muratjan.admin.common.constants.Constants;
 import cn.muratjan.admin.common.constants.OperationCode;
+import cn.muratjan.admin.common.excaption.AdminServiceException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
@@ -19,6 +22,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {
+
+    @ExceptionHandler(value = AdminServiceException.class)
+    @ResponseBody
+    public AjaxResult adminServiceExceptionHandler(AdminServiceException e) {
+        return  AjaxResult.error(e.getMessage());
+    }
+
+    @ExceptionHandler(value = NotPermissionException.class)
+    @ResponseBody
+    public AjaxResult notPermissionExceptionHandler(NotPermissionException e) {
+        return  AjaxResult.error(e.getMessage());
+    }
+    @ExceptionHandler(value = NotRoleException.class)
+    @ResponseBody
+    public AjaxResult notRoleExceptionHandler(NotRoleException e) {
+        return  AjaxResult.error(e.getMessage());
+    }
 
     @ExceptionHandler(BindException.class)
     @ResponseBody

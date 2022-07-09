@@ -2,11 +2,12 @@ package cn.muratjan.smarket.controller;
 
 import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.dev33.satoken.stp.StpUtil;
+import cn.hutool.core.util.IdUtil;
 import cn.muratjan.smarket.common.AjaxResult;
 import cn.muratjan.smarket.common.excaption.OrderException;
 import cn.muratjan.smarket.common.excaption.ProductException;
 import cn.muratjan.smarket.common.excaption.UserException;
-import cn.muratjan.smarket.common.utils.RedisUtil;
+import cn.muratjan.smarket.common.utils.RedisUtils;
 import cn.muratjan.smarket.pojo.*;
 import cn.muratjan.smarket.service.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -14,7 +15,6 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.yulichang.query.MPJQueryWrapper;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +22,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.validation.constraints.Min;
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @author MRT
@@ -44,9 +48,9 @@ public class OrderController {
     private CommentService commentServiceImpl;
 
     @Resource
-    private RedisUtil redisUtil;
+    private RedisUtils redisUtils;
 
-    private int expireTime =1;
+    private int expireTime =60*30;
 
     /**
      * 提交订单
@@ -86,18 +90,20 @@ public class OrderController {
         order.setBuyerId(StpUtil.getLoginIdAsLong());
         order.setOrderStatus(0);
         order.setDatetime(LocalDateTime.now());
-        boolean save = orderServiceImpl.save(order);
-        if (!save) {
-            throw new OrderException("订单添加失败");
-        }
-        redisUtil.set(order.getOrderId(), order,expireTime);
+        order.setTotalMoney(order.getQuantity() * product.getPrice());
+        order.setOrderId(IdUtil.simpleUUID());
+        redisUtils.set(order.getOrderId(), order,expireTime);
         UpdateWrapper<Product> uProduct = new UpdateWrapper<>();
         uProduct.eq("product_id", order.getProductId());
         uProduct.set("quantity", product.getQuantity() - order.getQuantity());
         if (product.getQuantity() - order.getQuantity()== 0) {
             uProduct.set("status", 1);
         }
-        return AjaxResult.success("订单添加成功");
+        boolean save = orderServiceImpl.save(order);
+        if (!save) {
+            throw new OrderException("订单添加失败");
+        }
+        return AjaxResult.success("订单添加成功").put("orderId", order.getOrderId());
     }
 
     /**
@@ -118,9 +124,11 @@ public class OrderController {
         MPJQueryWrapper<Order> qOrder = new MPJQueryWrapper<>();
         qOrder.selectAll(Order.class);
         if (mode == 0) {
-            qOrder.eq("buyer_id", StpUtil.getLoginIdAsLong())
-                    .or()
-                    .eq("seller_id", StpUtil.getLoginIdAsLong());
+            qOrder
+                    .and(wrapper -> wrapper
+                            .eq("buyer_id", StpUtil.getLoginIdAsLong())
+                            .or()
+                            .eq("seller_id", StpUtil.getLoginIdAsLong()));
         } else if (mode == 1) {
             qOrder.eq("buyer_id", StpUtil.getLoginIdAsLong());
         } else if (mode == 2) {
@@ -128,16 +136,23 @@ public class OrderController {
         } else {
             throw new OrderException("mode参数错误");
         }
-
         if (status == 0) {
-            qOrder.eq("order_status", 0).orderByDesc("datetime");
+            qOrder.and(wrapper -> wrapper.eq("order_status", 0));
         } else if (status == 1) {
-            qOrder.eq("order_status", 0).orderByDesc("datetime");
+            qOrder.and(wrapper -> wrapper.eq("order_status", 1));
         } else if (status == 2) {
-            qOrder.eq("order_status", 1).orderByDesc("datetime");
+            qOrder.and(wrapper -> wrapper.eq("order_status", 2));
+        }else if (status == 21) {
+            qOrder.and(wrapper -> wrapper.eq("order_status", 21));
+        }else if (status == 22) {
+            qOrder.and(wrapper -> wrapper.eq("order_status", 22));
         } else if (status == 3) {
-            qOrder.eq("order_status", 2).orderByDesc("datetime");
-        } else if (status == 4) {
+            qOrder.and(wrapper -> wrapper.eq("order_status", 3));
+        } else if (status == 31) {
+            qOrder.and(wrapper -> wrapper.eq("order_status", 31));
+        }else if (status == 32) {
+            qOrder.and(wrapper -> wrapper.eq("order_status", 32));
+        }else if (status == 4) {
             qOrder.orderByDesc("datetime");
         } else {
             throw new OrderException("status参数错误");
@@ -224,8 +239,10 @@ public class OrderController {
             }else{
                 throw new OrderException("请等待买家确认");
             }
+        }else{
+            throw new OrderException("不允许直接更改状态为2或者3，请按照正常流程操作");
         }
-        redisUtil.set(order.getOrderId(),order.getOrderStatus(),expireTime);
+//        redisUtil.set(order.getOrderId(),order.getOrderStatus(),expireTime);
         boolean update = orderServiceImpl.update(uOrder);
         if (!update) {
             throw new OrderException("更改订单状态失败");
@@ -259,7 +276,7 @@ public class OrderController {
 
     @GetMapping("/test")
     public AjaxResult test() {
-        redisUtil.set("a","b",30);
+        redisUtils.set("a","b",15);
         return AjaxResult.success("test");
     }
 
@@ -277,7 +294,7 @@ public class OrderController {
         if (order == null) {
             throw new OrderException("订单不存在");
         }
-        if(order.getStatus() != 1){
+        if(order.getStatus() != 0){
             throw new OrderException("每次订单只能评价一次");
         }
         QueryWrapper<Comment> qComment = new QueryWrapper<>();
@@ -364,7 +381,7 @@ public class OrderController {
     public AjaxResult getOrderDetail(@RequestParam String orderId){
         QueryWrapper<Order> qOrder = new QueryWrapper<>();
         qOrder.eq("order_id", orderId);
-        Order order = orderServiceImpl.getOne(qOrder);
+        Order order = orderServiceImpl.getOneDeep(qOrder);
         if (order == null) {
             throw new OrderException("订单不存在");
         }
@@ -381,7 +398,7 @@ public class OrderController {
     public AjaxResult getProductDetail(@RequestParam String productId){
         QueryWrapper<Product> qProduct = new QueryWrapper<>();
         qProduct.eq("product_id", productId);
-        Product product = productServiceImpl.getOne(qProduct);
+        Product product = productServiceImpl.getOneDeep(qProduct);
         if (product == null) {
             throw new ProductException("商品不存在");
         }
@@ -403,6 +420,44 @@ public class OrderController {
             throw new UserException("商家不存在");
         }
         return AjaxResult.success(seller);
+    }
+    @GetMapping("/statistics")
+    @SaCheckLogin
+    public AjaxResult getInfo(@RequestParam String userId){
+        QueryWrapper<Order> qOrder = new QueryWrapper<>();
+        qOrder.eq("seller_id", userId);
+        List<Order> orders = orderServiceImpl.list(qOrder);
+        int finishOrder = 0;
+        int cancelOrder = 0;
+        double totalMoney = 0;
+        int star = 0;
+
+        for(Order order : orders){
+            if(order.getOrderStatus() == 2){
+                finishOrder++;
+            }
+            if(order.getOrderStatus() == 3){
+                cancelOrder++;
+            }
+            totalMoney += order.getTotalMoney();
+        }
+        Map<String, Object> map = new HashMap<>();
+        map.put("finishOrder", finishOrder);
+        map.put("cancelOrder", cancelOrder);
+        map.put("totalMoney", totalMoney);
+        map.put("avarageMoney",(double) totalMoney/finishOrder);
+        QueryWrapper<Comment> qComment = new QueryWrapper<>();
+        qComment.in("order_id", orders.stream().map(Order::getOrderId).collect(Collectors.toList()));
+        List<Comment> comments = commentServiceImpl.list(qComment);
+        if (comments.size() == 0) {
+            map.put("star", 0);
+        }else{
+            for(Comment comment : comments){
+                star += comment.getScore();
+            }
+            map.put("star", (double)star/comments.size());
+        }
+        return AjaxResult.success(map);
     }
 
 }

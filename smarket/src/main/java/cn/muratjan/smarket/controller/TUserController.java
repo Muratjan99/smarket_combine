@@ -6,14 +6,8 @@ import cn.dev33.satoken.stp.StpUtil;
 import cn.muratjan.smarket.common.AjaxResult;
 import cn.muratjan.smarket.common.constants.Constants;
 import cn.muratjan.smarket.common.excaption.UserException;
-import cn.muratjan.smarket.pojo.LoginHistory;
-import cn.muratjan.smarket.pojo.Order;
-import cn.muratjan.smarket.pojo.Product;
-import cn.muratjan.smarket.pojo.Tuser;
-import cn.muratjan.smarket.service.ITuserService;
-import cn.muratjan.smarket.service.LoginHistoryService;
-import cn.muratjan.smarket.service.OrderService;
-import cn.muratjan.smarket.service.ProductService;
+import cn.muratjan.smarket.pojo.*;
+import cn.muratjan.smarket.service.*;
 import cn.muratjan.smarket.vo.LoginVO;
 import cn.muratjan.smarket.vo.RegisterVO;
 import cn.muratjan.smarket.vo.UpdateUserVO;
@@ -25,6 +19,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @author MRT
@@ -42,7 +37,10 @@ public class TUserController {
     private OrderService orderServiceImpl;
     @Resource
     private ProductService productServiceImpl;
-
+    @Resource
+    private RoleUserService roleUserServiceImpl;
+    @Resource
+    private CommentService commentServiceImpl;
 
     /**
      * 检测用户名是否存在
@@ -66,6 +64,13 @@ public class TUserController {
     @PostMapping("/register")
     public AjaxResult register(@RequestBody RegisterVO registerVO) {
         tuserServiceImpl.register(registerVO);
+        RoleUser roleUser = new RoleUser();
+        roleUser.setUserId(tuserServiceImpl.getOne(new QueryWrapper<Tuser>().eq("username", registerVO.getUsername())).getUserId());
+        roleUser.setRoleId(5L);
+        boolean save = roleUserServiceImpl.save(roleUser);
+        if (!save) {
+            throw new UserException("注册失败");
+        }
         return AjaxResult.success("注册成功");
     }
 
@@ -194,12 +199,26 @@ public class TUserController {
         queryWrapper1.eq("seller_id", userId);
         queryWrapper1.eq("order_status", 2);
         List<Order> orders = orderServiceImpl.list(queryWrapper1);
-        //查询他卖的
+        //查询他卖的货物
         QueryWrapper<Product> queryWrapper2 = new QueryWrapper<>();
         queryWrapper2.eq("vendor_id", userId);
         queryWrapper.eq("status",0);
         List<Product> products = productServiceImpl.list(queryWrapper2);
-        return AjaxResult.success("获取成功").put("user", user).put("orders", orders).put("products", products);
+
+        // 查询星级
+        QueryWrapper<Comment> queryWrapper3 = new QueryWrapper<>();
+        queryWrapper3.in("order_id", orders.stream().map(Order::getOrderId).collect(Collectors.toList()));
+        List<Comment> comments = commentServiceImpl.list(queryWrapper3);
+        double star = 0;
+        for (Comment comment : comments) {
+            star += comment.getScore();
+        }
+        if (comments.size() > 0) {
+            star = star / comments.size();
+        }else {
+           star = 0;
+        }
+        return AjaxResult.success("获取成功").put("user", user).put("orders", orders).put("products", products).put("star", star);
     }
 
     /**

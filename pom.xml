@@ -51,12 +51,6 @@
                 <artifactId>smarket</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
-            <!--主启动模块-->
-            <dependency>
-                <groupId>cn.muratjan</groupId>
-                <artifactId>smarket_main</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
         <!--Sa-Token 系列 start-->
             <!-- Sa-Token 权限认证, 在线文档：http://sa-token.dev33.cn/ -->
             <dependency>
@@ -115,11 +109,6 @@
                 <version>1.2.2</version>
             </dependency>
             <!--内部依赖-->
-            <dependency>
-                <groupId>cn.muratjan</groupId>
-                <artifactId>smarket_admin</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
             <dependency>
                 <groupId>cn.muratjan</groupId>
                 <artifactId>smarket</artifactId>

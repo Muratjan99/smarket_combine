@@ -1,13 +1,15 @@
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
   # 数据源配置
   datasource:
     username: root
-    password: 990628
-    url: jdbc:mysql://localhost:3306/smarket?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    password: 123456
+    url: jdbc:mysql://115.154.88.174:3306/smarket?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
   # redis配置
   redis:
-    database: 1
+    database: 0
     host: 115.154.88.174
     port: 6379
     timeout: 10s
@@ -21,6 +23,7 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true
   global-config:
     db-config:
       logic-delete-field: isDeleted
@@ -28,7 +31,7 @@ mybatis-plus:
 # Sa-Token配置
 sa-token:
   # token 名称 (同时也是cookie名称)
-  token-name: smarket
+  token-name: smarket-admin
   # token 有效期，单位s 默认30天, -1代表永不过期
   timeout: 2592000
   # token 临时有效期 (指定时间内无操作就视为token过期) 单位: 秒
@@ -49,12 +52,6 @@ fdfs:
     width: 150
     height: 150
   tracker-list: 115.154.88.174:22122
-ai:
-  appId: 26579221
-  apiKey: wiSwCHRSDxnkoKps5uh6o4GB
-  secretKey: E8bd3hoqd18qVM68Xm1h2mnxeEZfDYNs
-  imageType: BASE64
-  groupId: login_1
 server:
   port: 8081
 
